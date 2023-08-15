@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    /* Modules */
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "moduleResolution": "node16" /*algorithm for how to read module import/require statements*/,
+    "noImplicitAny": true /*stops typescript from falling back on any when no typing*/,
+    "removeComments": true /* remove comments on compile*/,
+    // "preserveConstEnums": true /*keeps enums in the code on compile.*/, (IDK if I want this)
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "outDir": "dist" /*compile director name*/,
+    "declaration": true,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+    // allowSyntheticDefaultImports = import React from "react" instead of import * as React from "react";
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ] /*extra type files to include that aren't loaded from the compile target*/,
+    "allowJs": true /*allows JS imports, just in case*/,
+    /* Type Checking */
+    "strict": true /* Enable all strict type-checking options. */,
+    "noEmit": false /* if true won't output, but will need to use something like babel */,
+    "incremental": true /* generates .tsbuildinfo files on compile to reference for faster compiles, files can be deleted*/,
+    "resolveJsonModule": true /*allows json file imports*/,
+    "isolatedModules": true /*kinda for babel, TS warns you if code you write can't be checked on single file check systems*/,
+    "jsx": "preserve" /*compiles jsx into jsx, instead of createElement*/,
+    "baseUrl": "./" /* where TS starts looking for imports*/,
+    // "paths": {}, // relative paths
+    "plugins": [
+      /*List of language service plugins to run inside the editor*/
+      {
+        /*
+        // allows
+        // The following transforms path to '../utils/sum'
+        // import { sum } from "@utils/sum";
+        */
+        "transform": "typescript-transform-paths"
+      }
+    ]
+  },
+  "include": ["src/**/*"] /*files to compile*/,
+  "exclude": ["node_modules"] /*files to not compile*/,
+  // "types": []/* each package name @types is shown*/, // don't need this yet
+  "skipLibCheck": true /* Skip type checking all .d.ts files. only checks the specific types you use */
+}
+
+/*reference this https://github.com/timmyichen/dev-directory/blob/main/tsconfig.json*/
