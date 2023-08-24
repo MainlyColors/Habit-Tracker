@@ -4,8 +4,10 @@
   "description": "App for tracking habit completion",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon",
+    "dev:server": "cross-env NODE_ENV=development npm run ts:exec server/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node ./src/server/server.ts"
+    "ts:exec": "ts-node -r tsconfig-paths/register --project ./tsconfig.json --transpile-only"
   },
   "author": "Ryan Mahara",
   "license": "MIT",
@@ -16,7 +18,9 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.5.0",
+    "cross-env": "^7.0.3",
     "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0"
   }
 }

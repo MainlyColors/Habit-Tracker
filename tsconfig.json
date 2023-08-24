@@ -28,7 +28,10 @@
     "isolatedModules": true /*kinda for babel, TS warns you if code you write can't be checked on single file check systems*/,
     "jsx": "preserve" /*compiles jsx into jsx, instead of createElement*/,
     "baseUrl": "./" /* where TS starts looking for imports*/,
-    // "paths": {}, // relative paths
+    "paths": {
+      "server/*": ["server/*"],
+      "client/*": ["client/*"]
+    }, // relative paths
     "plugins": [
       /*List of language service plugins to run inside the editor*/
       {
