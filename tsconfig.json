@@ -41,7 +41,7 @@
       }
     ]
   },
-  "include": ["src/**/*"] /*files to compile*/,
+  "include": ["server/**/*"] /*files to compile*/,
   "exclude": ["node_modules"] /*files to not compile*/,
   // "types": []/* each package name @types is shown*/, // don't need this yet
   "skipLibCheck": true /* Skip type checking all .d.ts files. only checks the specific types you use */
