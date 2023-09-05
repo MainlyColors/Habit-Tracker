@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "dev:server": "cross-env NODE_ENV=development npm run ts:exec server/server.ts",
+    "check:prettier": "eslint-config-prettier ./server/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts:exec": "ts-node -r tsconfig-paths/register --project ./tsconfig.json --swc"
   },
@@ -24,7 +25,9 @@
     "@typescript-eslint/parser": "^6.4.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
     "nodemon": "^3.0.1",
+    "prettier": "3.0.3",
     "regenerator-runtime": "^0.14.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0"
